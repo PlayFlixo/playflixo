@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.image-container {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.image-container img {
+  border-radius: 10px;
+  width: calc(12.5% - 12px);
+  cursor: pointer;
+  margin: 5px;
+  transition: all 0.5s;
+}
+
+.image-container img:hover {
+  transform: scale(1.1);
+}
+</style>
+</head>
+<body>
+
+<h2></h2>
+
+<div class="image-container">
+  <!-- Partner 1 -->
+  <img src="https://lh6.googleusercontent.com/-FbBSPF8T9nxv6tFY_dkrEvhuSpF1Aw-1nTUUJ0D8btAfImKiWXNwbOa89x2ssRyqipXy0dOPj7CbHrpp4ZGgg=w16383" onclick="openGame('https://sites.google.com/students.rfsd.k12.wi.us/arcademovies')">
+
+  <!-- Partner 2 -->
+  <img src="https://jackgames.w3spaces.com/images/favicon.png" onclick="openGame('https://jackgames.w3spaces.com/')">
+  
+  <!-- Partner 3 -->
+  <img src="https://lh5.googleusercontent.com/6YEQOhG1b1dlfHxmW5ruucORkQ8zHdVA13YtC-GJPHflikZn0USefeRp1lEwlTYlUgGGq4NLDQgM2NnHwY_wFbw=w16383" onclick="openGame('https://sites.google.com/students.rfsd.k12.wi.us/idk/games-websites')">
+
+  <!-- Partner 4 -->
+  <img src="https://www.ixl.com/dv3/jYg5YEjxG5lJfNjwW0r4Kw8lo5g/yui3/opengraph/assets/square_og_ixl.png" onclick="openGame('https://sites.google.com/students.rfsd.k12.wi.us/unlimitedfun/clicker-game')">
+</div>
+
+<script>
+    function openGame(url) {
+        var win;
+
+        if (url) {
+            if (win) {
+                win.location.href = url;
+                win.focus();
+            } else {
+                win = window.open(url, '_blank');
+                win.focus();
+
+                var interval = setInterval(function() {
+                    if (win.closed) {
+                        clearInterval(interval);
+                        win = undefined;
+                    }
+                }, 500);
+            }
+        }
+    }
+</script>
+
+</body>
+</html>
