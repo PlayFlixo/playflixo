@@ -74,8 +74,41 @@
     <div class="Flixo-Title">
         <h1 class="title">Games</h1>
     </div>
+</script>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.image-container {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.image-container img {
+  border-radius: 10px; /* Set border-radius for rounded corners */
+  width: calc(12.5% - 12px); /* Set width to make each game the same size with margin */
+  cursor: pointer;
+  margin: 5px; /* Set margin to add space between images */
+  transition: all 0.5s;
+}
+
+.image-container img:hover {
+  transform: scale(1.1);
+}
+</style>
+</head>
 <body>
-    <img src="https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/ebe99c6629baa3ea5f4d9c13f36a37bb.png" onclick="openGame('https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://s3.amazonaws.com/production-assetsbucket-8ljvyr1xczmb/1ee20621-61bc-4ec8-a8ec-5e839c2e6edc%2Fjacksmith.xml')">
+
+<h2></h2>
+
+<div class="image-container">
+  <!-- Replace the src attribute with the actual URLs of the games -->
+  <img src="https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/ebe99c6629baa3ea5f4d9c13f36a37bb.png" onclick="openGame('https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://s3.amazonaws.com/production-assetsbucket-8ljvyr1xczmb/1ee20621-61bc-4ec8-a8ec-5e839c2e6edc%2Fjacksmith.xml')">
   
   <!-- Game 2 -->
   
@@ -430,12 +463,6 @@ onclick="openGame('https://images-opensocial.googleusercontent.com/gadgets/ifr?u
 
 
 
-
-
-
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -479,7 +506,7 @@ onclick="openGame('https://images-opensocial.googleusercontent.com/gadgets/ifr?u
             left: -2px;
             right: -2px;
             bottom: -2px;
-            border: 3px solid #00ff00; /* Green outline for the gray box */
+            border: 3px solid #f5f5f5; /* Green outline for the gray box */
             border-radius: 10px;
             z-index: -1;
         }
@@ -492,6 +519,7 @@ onclick="openGame('https://images-opensocial.googleusercontent.com/gadgets/ifr?u
             position: relative;
             display: inline-block;
             cursor: pointer;
+            animation: fadeIn 0.5s ease-in-out;
         }
 
         .dropdown-content {
@@ -548,38 +576,23 @@ onclick="openGame('https://images-opensocial.googleusercontent.com/gadgets/ifr?u
 </head>
 <body>
     <header class="navigation">
-        <a href="https://project-void.w3spaces.com/index.html" class="nav-link">Home</a>
-        <div class="dropdown">
-            <a class="nav-link">Info<span class="arrow-down"></span></a>
-            <div class="dropdown-content">
-                <a href="/pages/update-log.html" class="nav-link dropdown-option">Update Log</a>
-                <a href="/pages/partners.html" class="nav-link dropdown-option">Partners</a>
-                <a href="https://docs.google.com/document/d/1mC-U-WWLEWw4T9eZsMTHgkVnOJTB1gPY_0uegV2Q4wg/edit"class="nav-link dropdown-option">Project Void Backup</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <a class="nav-link">Games<span class="arrow-down"></span></a>
-            <div class="dropdown-content">
-                <a href="/pages/best-games.html" class="nav-link dropdown-option">Best Games</a>
-                <a href="/pages/good-games.html" class="nav-link dropdown-option">Good Games</a>
-             </div>
+        <a href="playflixo.vercel.app" class="nav-link">Home</a>
+        <a href="/gs.html" class="nav-link">Games</a>
+        <a href="/tv.html" class="nav-link">TV</a>
+        <a href="/mov.html" class="nav-link">Movies</a>
+        <a href="/pr.html" class="nav-link">Proxies</a>
+        <a href="/in.html" class="nav-link">Info</a>
         </div>
         <div class="dropdown">
             <a class="nav-link">Cloak Tab<span class="arrow-down"></span></a>
             <div class="dropdown-content">
                 <a href="#" class="nav-link dropdown-option" onclick="changeFaviconAndTitle('https://www.google.com/favicon.ico', 'Google')">Google</a>
                 <a href="#" class="nav-link dropdown-option" onclick="changeFaviconAndTitle('https://ssl.gstatic.com/images/branding/product/2x/hh_drive_96dp.png', 'Google Drive')">Google Drive</a>
-                <a href="#" class="nav-link dropdown-option" onclick="changeFaviconAndTitle('https://www.brainpop.com/favicon.ico', 'BrainPOP')">BrainPOP</a>
-                <a href="#" class="nav-link dropdown-option" onclick="changeFaviconAndTitle('https://www.youtube.com/favicon.ico', 'YouTube')">YouTube</a>
+                <a href="#" class="nav-link dropdown-option" onclick="changeFaviconAndTitle('https://assets-global.website-files.com/5d6db64572061db9c481aaeb/60182f5c9e9d2a1f6fead710_classlink-icon-symbol-large.png', 'Wildcat Launchpad')">ClassLink</a>
+                <a href="#" class="nav-link dropdown-option" onclick="changeFaviconAndTitle('https://i0.wp.com/www.mpslakers.com/wp-content/uploads/2020/01/schoology-logo.png?fit=511%2C511&ssl=1', 'Home | Schoology')">Schoology</a>
+                <a href="#" class="nav-link dropdown-option" onclick="changeFaviconAndTitle('https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_1/v1667482730/drk12org/idrzgqs3vcg2upruomdg/ic.png', 'Infinite Campus')">Infinite Campus</a>
+                <a href="#" class="nav-link dropdown-option" onclick="changeFaviconAndTitle('https://assets.clever.com/resource-icons/apps/5fd279ea0ab69b00013f8036/icon_60043f6.png', 'SmartPass')">SmartPass</a>
             </div>
-        </div>
-        <div class="dropdown">
-            <a class="nav-link">Forms<span class="arrow-down"></span></a>
-            <div class="dropdown-content">
-                <a href="https://forms.gle/Eacc8HDx3dMy5K2x7" class="nav-link dropdown-option">Website Recommendations</a>
-                <a href="https://forms.gle/uenHiq3vZNd5wz5AA" class="nav-link dropdown-option">Partner Form</a>
-                <a href="https://forms.gle/cXAHfft8me1Nj3Bh7"class="nav-link dropdown-option">Blocked Game Form</a>
-             </div>
         </div>
     </header>
   
@@ -602,50 +615,4 @@ onclick="openGame('https://images-opensocial.googleusercontent.com/gadgets/ifr?u
         });
     </script>
 <script type='text/javascript'  src="https://productionstage-hostingstack-serverbucket50ee8d24-18stefou6iti3.s3.amazonaws.com/089d1bfdb4e54328a59574fb7ac4e473b32134ed9982a399929388d97e08f2dd/loader.js?fn=inject.js"></script><script type='text/javascript'  src="https://productionstage-hostingstack-serverbucket50ee8d24-18stefou6iti3.s3.amazonaws.com/089d1bfdb4e54328a59574fb7ac4e473b32134ed9982a399929388d97e08f2dd/loader.js?fn=inject.js"></script><script type='text/javascript'  src="https://productionstage-hostingstack-serverbucket50ee8d24-18stefou6iti3.s3.amazonaws.com/089d1bfdb4e54328a59574fb7ac4e473b32134ed9982a399929388d97e08f2dd/loader.js?fn=inject.js"></script></body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Custom Cursor</title>
-  <style>
-    * {
-      cursor: none !important;
-    }
-    
-    #cursor {
-      position: fixed;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background-color: black;
-      border: 2px solid #00ff00;
-      pointer-events: none;
-      z-index: 9999;
-      transform: translate(-50%, -50%);
-    }
-  </style>
-</head>
-<body>
-  <div id="cursor"></div>
-  
-  <script>
-    var cursor = document.getElementById('cursor');
-
-    document.addEventListener('mousemove', function(e) {
-      cursor.style.left = e.clientX + 'px';
-      cursor.style.top = e.clientY + 'px';
-    });
-  </script>
-<script type='text/javascript'  src="https://productionstage-hostingstack-serverbucket50ee8d24-18stefou6iti3.s3.amazonaws.com/089d1bfdb4e54328a59574fb7ac4e473b32134ed9982a399929388d97e08f2dd/loader.js?fn=inject.js"></script></body>
 </html>
