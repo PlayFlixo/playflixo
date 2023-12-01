@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leaderboard</title>
+  <style>
+    body {
+      background-color: transparent;
+      font-family: Arial, sans-serif;
+      color: #000000; /* Updated to black */
+      margin: 0;
+      padding: 0;
+    }
+
+    #leaderboard {
+      max-width: 400px;
+      margin: 20px auto;
+      background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2, h3 {
+      text-align: center;
+    }
+
+    .game {
+      margin-bottom: 20px;
+    }
+
+    .score-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .score-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-top: 20px;
+      background-color: #000000; /* Updated to black */
+      color: #f5f5f5; /* Updated to white */
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    /* Add the following style for the underline of the anchor tag */
+    a {
+      text-decoration: none;
+      border-bottom: 1px solid #f5f5f5;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="leaderboard">
+    <h2>Leaderboard</h2>
+
+    <!-- Flappy Bird -->
+    <div class="game">
+      <h3>Flappy Bird</h3>
+      <ul class="score-list">
+        <li class="score-item">1. Daddy Chuck - 127</li>
+        <li class="score-item">2. Mater - 28</li>
+        <li class="score-item">3. Call me daddy - 24</li>
+      </ul>
+    </div>
+
+    <!-- Slope -->
+    <div class="game">
+      <h3>Slope</h3>
+      <ul class="score-list">
+        <li class="score-item">1. Call me daddy - 132</li>
+        <li class="score-item">2. Mater - 87</li>
+        <li class="score-item">3. Hakeals Most Submissive Little Pupil - 76</li>
+      </ul>
+    </div>
+
+    <!-- Snow Rider 3D -->
+    <div class="game">
+      <h3>Snow Rider 3D</h3>
+      <ul class="score-list">
+        <li class="score-item">1. Daddy Chuck - 166</li>
+        <li class="score-item">2. Mater - 81</li>
+        <li class="score-item">3. Hackels Little Child Stealer - 70</li>
+      </ul>
+    </div>
+
+    <!-- Submit Your Score Button -->
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf5h1FQtn-ChF-QS4VMQ3xOw1Tn9Cs3guaWPKdnRwZn-c_r_g/viewform?usp=sf_link" target="_blank">
+      <button>Submit Your Score</button>
+    </a>
+  </div>
+
+</body>
+</html>
