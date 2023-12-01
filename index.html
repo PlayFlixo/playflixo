@@ -1,25 +1,50 @@
-User
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Flixo</title>
+<!-- Google Adsense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9494126940648215"
+     crossorigin="anonymous"></script>
+
+</script>
+
+
+
+
+    <title>Project Void</title>
     <style>
         body {
-            background-color: #000000;
-            margin: 0;
-            padding: 0;
+            background-color: #000;
+            margin-bottom: 0;
+            height: 1000px;
+            scrollbar-width: thin;
+            scrollbar-color: black;
+            scollbar: black;
+            border: 0px solid #f5f5f5;
         }
 
-        .Flixo-Title {
+        ::-webkit-scrollbar {
+            width: 8px;
+            background-color: black;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: black;
+            border: 1px solid #f5f5f5;
+            border-radius: 10px;
+        }
+
+        .Flixo-Void-Title {
             font-size: 36px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 30vh;
+            height: 40vh;
             text-align: center;
             font-family: Arial, sans-serif;
-            color: #f5f5f5;
+            color: black;
+            margin-bottom: 0px;
+            text-shadow: -1px -1px 0 #f5f5f5, 1px -1px 0 #f5f5f5, -1px 1px 0 #f5f5f5, 1px 1px 0 #f5f5f5;
         }
 
         .Announcements-Title {
@@ -56,53 +81,72 @@ User
             margin-left: 0px;
             font-size: 20px;
         }
+        
+        .website-visits-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            color: black;
+            margin-bottom: 0px;
+            text-shadow: -1px -1px 0 #f5f5f5, 1px -1px 0 #f5f5f5, -1px 1px 0 #f5f5f5, 1px 1px 0 #f5f5f5;
+        }
+
+        .visits-counter {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 0px;
+            margin-bottom: 50px;
+        }
+
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
     <link rel="icon" href="Image Link">
 </head>
 <body>
-    <div class="Flixo-Title">
+    <div class="Project-Void-Title">
         <h1 class="title">Flixo</h1>
     </div>
     <div class="Announcements-Title">
         <h2 class="header">Announcements</h2>
     </div>
     <div class="Announcement-text">
-        <h3 class="header">This site is still in develepment even though it is released. It takes a while to fully code an entire website from just a blank page box and files. Lots of updates will be happening throughout the school day.</h3>
+        <h3 class="header">It took around 100+ hours of working on this site to make it. And it is a lot harder than a Google Site because you have to build the website from straight code. But we can now code whatever we want since coding is way more advanced. If you have a recommendation, submit it in the website recommendations form.</h3>
     </div>
-  
-<script>
-    // Disable right-click context menu
-    document.addEventListener('contextmenu', function(e) {
-        e.preventDefault();
-    });
 
-    document.onkeydown = function (e) {
-        if (event.keyCode == 123) {
-            return false;
+    <script>
+        // Disable right-click context menu
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+
+        document.onkeydown = function (e) {
+            if (event.keyCode == 123) {
+                return false;
+            }
+            if (e.ctrlKey && e.shiftKey && (e.keyCode == 'I'.charCodeAt(0) || e.keyCode == 'i'.charCodeAt(0))) {
+                return false;
+            }
+            if (e.ctrlKey && e.shiftKey && (e.keyCode == 'C'.charCodeAt(0) || e.keyCode == 'c'.charCodeAt(0))) {
+                return false;
+            }
+            if (e.ctrlKey && e.shiftKey && (e.keyCode == 'J'.charCodeAt(0) || e.keyCode == 'j'.charCodeAt(0))) {
+                return false;
+            }
+            if (e.ctrlKey && (e.keyCode == 'U'.charCodeAt(0) || e.keyCode == 'u'.charCodeAt(0))) {
+                return false;
+            }
+            if (e.ctrlKey && (e.keyCode == 'S'.charCodeAt(0) || e.keyCode == 's'.charCodeAt(0))) {
+                return false;
+            }
         }
-        if (e.ctrlKey && e.shiftKey && (e.keyCode == 'I'.charCodeAt(0) || e.keyCode == 'i'.charCodeAt(0))) {
-            return false;
-        }
-        if (e.ctrlKey && e.shiftKey && (e.keyCode == 'C'.charCodeAt(0) || e.keyCode == 'c'.charCodeAt(0))) {
-            return false;
-        }
-        if (e.ctrlKey && e.shiftKey && (e.keyCode == 'J'.charCodeAt(0) || e.keyCode == 'j'.charCodeAt(0))) {
-            return false;
-        }
-        if (e.ctrlKey && (e.keyCode == 'U'.charCodeAt(0) || e.keyCode == 'u'.charCodeAt(0))) {
-            return false;
-        }
-        if (e.ctrlKey && (e.keyCode == 'S'.charCodeAt(0) || e.keyCode == 's'.charCodeAt(0))) {
-            return false;
-        }
-    }
-</script>
+    </script>
 </body>
 </html>
-
-
-
 
 
 
@@ -164,6 +208,7 @@ User
             position: relative;
             display: inline-block;
             cursor: pointer;
+            animation: fadeIn 0.5s ease-in-out;
         }
 
         .dropdown-content {
@@ -220,12 +265,13 @@ User
 </head>
 <body>
     <header class="navigation">
-        <a href="/index.html" class="nav-link">Home</a>
+        <a href="playflixo.vercel.app" class="nav-link">Home</a>
         <a href="/gs.html" class="nav-link">Games</a>
-        <a href="/mov.html" class="nav-link">Movies</a>
         <a href="/tv.html" class="nav-link">TV</a>
-        <a href="/tv.html" class="nav-link">Proxies</a>
-        <a href="/tv.html" class="nav-link">Info</a>
+        <a href="/mov.html" class="nav-link">Movies</a>
+        <a href="/pr.html" class="nav-link">Proxies</a>
+        <a href="/in.html" class="nav-link">Info</a>
+        </div>
         <div class="dropdown">
             <a class="nav-link">Cloak Tab<span class="arrow-down"></span></a>
             <div class="dropdown-content">
