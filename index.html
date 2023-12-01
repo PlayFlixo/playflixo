@@ -61,6 +61,8 @@
     <link rel="icon" href="Image Link">
 </head>
 <body>
+    <!-- Placeholder for the navigation bar -->
+    <div id="navbar-placeholder"></div>
     <div class="Flixo-Title">
         <h1 class="title">Flixo</h1>
     </div>
@@ -73,7 +75,25 @@
     </div>
   
 <script>
-    // Disable right-click context menu
+    // Fetch and insert the navigation bar
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch("navbar.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("navbar-placeholder").innerHTML = data;
+                })
+                .catch(error => console.error("Error fetching navbar:", error));
+        });
+
+        // Your existing script
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+
+        document.onkeydown = function (e) {
+            // Your existing key event handling
+            
+            // Disable right-click context menu
     document.addEventListener('contextmenu', function(e) {
         e.preventDefault();
     });
