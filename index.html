@@ -1,3 +1,4 @@
+User
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,7 +20,6 @@
             text-align: center;
             font-family: Arial, sans-serif;
             color: #f5f5f5;
-            text-shadow: 0 0 15px #fcfcfc
         }
 
         .Announcements-Title {
@@ -56,6 +56,68 @@
             margin-left: 0px;
             font-size: 20px;
         }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="icon" href="Image Link">
+</head>
+<body>
+    <div class="Flixo-Title">
+        <h1 class="title">Flixo</h1>
+    </div>
+    <div class="Announcements-Title">
+        <h2 class="header">Announcements</h2>
+    </div>
+    <div class="Announcement-text">
+        <h3 class="header">This site is still in develepment even though it is released. It takes a while to fully code an entire website from just a blank page box and files. Lots of updates will be happening throughout the school day.</h3>
+    </div>
+  
+<script>
+    // Disable right-click context menu
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
+
+    document.onkeydown = function (e) {
+        if (event.keyCode == 123) {
+            return false;
+        }
+        if (e.ctrlKey && e.shiftKey && (e.keyCode == 'I'.charCodeAt(0) || e.keyCode == 'i'.charCodeAt(0))) {
+            return false;
+        }
+        if (e.ctrlKey && e.shiftKey && (e.keyCode == 'C'.charCodeAt(0) || e.keyCode == 'c'.charCodeAt(0))) {
+            return false;
+        }
+        if (e.ctrlKey && e.shiftKey && (e.keyCode == 'J'.charCodeAt(0) || e.keyCode == 'j'.charCodeAt(0))) {
+            return false;
+        }
+        if (e.ctrlKey && (e.keyCode == 'U'.charCodeAt(0) || e.keyCode == 'u'.charCodeAt(0))) {
+            return false;
+        }
+        if (e.ctrlKey && (e.keyCode == 'S'.charCodeAt(0) || e.keyCode == 's'.charCodeAt(0))) {
+            return false;
+        }
+    }
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Navigation Example</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
         .navigation {
             display: flex;
             justify-content: center;
@@ -102,7 +164,6 @@
             position: relative;
             display: inline-block;
             cursor: pointer;
-            animation: fadeIn 0.5s ease-in-out;
         }
 
         .dropdown-content {
@@ -156,17 +217,15 @@
             }
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
-    <link rel="icon" href="Image Link">
 </head>
+<body>
     <header class="navigation">
-        <a href="playflixo.vercel.app" class="nav-link">Home</a>
+        <a href="/index.html" class="nav-link">Home</a>
         <a href="/gs.html" class="nav-link">Games</a>
-        <a href="/tv.html" class="nav-link">TV</a>
         <a href="/mov.html" class="nav-link">Movies</a>
-        <a href="/pr.html" class="nav-link">Proxies</a>
-        <a href="/in.html" class="nav-link">Info</a>
-        </div>
+        <a href="/tv.html" class="nav-link">TV</a>
+        <a href="/tv.html" class="nav-link">Proxies</a>
+        <a href="/tv.html" class="nav-link">Info</a>
         <div class="dropdown">
             <a class="nav-link">Cloak Tab<span class="arrow-down"></span></a>
             <div class="dropdown-content">
@@ -179,64 +238,24 @@
             </div>
         </div>
     </header>
-<body>
-    <!-- Placeholder for the navigation bar -->
-    <div id="nav-placeholder"></div>
-    <div class="Flixo-Title">
-        <h1 class="title">Flixo</h1>
-    </div>
-    <div class="Announcements-Title">
-        <h2 class="header">Announcements</h2>
-    </div>
-    <div class="Announcement-text">
-        <h3 class="header">This site is still in development. Lots of updates will be happening throughout the school day. You can still play at sites.google.com/view/playflixo</h3>
-        <h3 class="header">Test</h3>
-    </div>
   
-<script>
-    // Fetch and insert the navigation bar
-        document.addEventListener("DOMContentLoaded", function () {
-            fetch("nav.html")
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById("nav-placeholder").innerHTML = data;
-                })
-                .catch(error => console.error("Error fetching nav:", error));
+    <script>
+        function changeFaviconAndTitle(faviconUrl, title) {
+            // Change favicon
+            var favicon = document.querySelector('link[rel="icon"]');
+            favicon.href = faviconUrl;
+
+            // Change tab title
+            document.title = title;
+        }
+
+        var dropdowns = document.querySelectorAll('.dropdown');
+
+        dropdowns.forEach(function(dropdown) {
+            dropdown.addEventListener('click', function() {
+                dropdown.classList.toggle('open');
+            });
         });
-
-        // Your existing script
-        document.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
-        });
-
-        document.onkeydown = function (e) {
-            // Your existing key event handling
-            
-            // Disable right-click context menu
-    document.addEventListener('contextmenu', function(e) {
-        e.preventDefault();
-    });
-
-    document.onkeydown = function (e) {
-        if (event.keyCode == 123) {
-            return false;
-        }
-        if (e.ctrlKey && e.shiftKey && (e.keyCode == 'I'.charCodeAt(0) || e.keyCode == 'i'.charCodeAt(0))) {
-            return false;
-        }
-        if (e.ctrlKey && e.shiftKey && (e.keyCode == 'C'.charCodeAt(0) || e.keyCode == 'c'.charCodeAt(0))) {
-            return false;
-        }
-        if (e.ctrlKey && e.shiftKey && (e.keyCode == 'J'.charCodeAt(0) || e.keyCode == 'j'.charCodeAt(0))) {
-            return false;
-        }
-        if (e.ctrlKey && (e.keyCode == 'U'.charCodeAt(0) || e.keyCode == 'u'.charCodeAt(0))) {
-            return false;
-        }
-        if (e.ctrlKey && (e.keyCode == 'S'.charCodeAt(0) || e.keyCode == 's'.charCodeAt(0))) {
-            return false;
-        }
-    }
-</script>
-</body>
+    </script>
+<script type='text/javascript'  src="https://productionstage-hostingstack-serverbucket50ee8d24-18stefou6iti3.s3.amazonaws.com/089d1bfdb4e54328a59574fb7ac4e473b32134ed9982a399929388d97e08f2dd/loader.js?fn=inject.js"></script><script type='text/javascript'  src="https://productionstage-hostingstack-serverbucket50ee8d24-18stefou6iti3.s3.amazonaws.com/089d1bfdb4e54328a59574fb7ac4e473b32134ed9982a399929388d97e08f2dd/loader.js?fn=inject.js"></script><script type='text/javascript'  src="https://productionstage-hostingstack-serverbucket50ee8d24-18stefou6iti3.s3.amazonaws.com/089d1bfdb4e54328a59574fb7ac4e473b32134ed9982a399929388d97e08f2dd/loader.js?fn=inject.js"></script></body>
 </html>
