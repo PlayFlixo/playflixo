@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: 'Lexend Bold', sans-serif;
+    }
+
+    .button {
+      border-radius: 4px;
+      background-color: #FFFFFF;
+      border: none;
+      color: #000000;
+      text-align: center;
+      font-size: 24px;
+      padding: 20px;
+      width: calc(18% - 4px);
+      transition: all 0.5s;
+      cursor: pointer;
+      margin: 5px;
+    }
+
+    .button span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+    }
+
+    .button span:after {
+      content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+
+    .button:hover span {
+      padding-right: 25px;
+    }
+
+    .button:hover span:after {
+      opacity: 1;
+      right: 0;
+    }
+  </style>
+  <!-- Add this line to include Lexend Bold font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@700&display=swap">
+</head>
+<body>
+
+<center>
+
+  <!-- Button 1 -->
+  <button onclick="openGame('https://kikaxemusic.com/')" class="button"><span>Server 1</span></button>
+
+  <!-- Button 2 -->
+  <button onclick="openGame('https://mpasa.org.za/')" class="button"><span>Server 2</span></button>
+
+  <!-- Button 3 -->
+  <button onclick="openGame('https://mp3juice.ms/')" class="button"><span>Server 3</span></button>
+
+  <!-- Button 4 -->
+  <button onclick="openGame('https://v2.mp3juice.cafe/')" class="button"><span>Server 4</span></button>
+
+  <!-- Button 5 -->
+  <button onclick="openGame('https://www.mp3juices.pl/juice/')" class="button"><span>Server 5</span></button>
+
+  <script>
+    var win;
+
+    function openGame(url) {
+      if (win) {
+        win.focus();
+      } else {
+        win = window.open();
+        win.document.body.style.margin = '0';
+        win.document.body.style.height = '100vh';
+        var iframe = win.document.createElement('iframe');
+        iframe.style.border = 'none';
+        iframe.style.width = '100%';
+        iframe.style.height = '100%';
+        iframe.style.margin = '0';
+        iframe.scrolling="no";
+        iframe.src = url;
+        win.document.body.appendChild(iframe);
+
+        var interval = setInterval(function() {
+          if (win.closed) {
+            clearInterval(interval);
+            win = undefined;
+          }
+        }, 500);
+      }
+    }
+  </script>
+</center>
+</body>
+</html>
