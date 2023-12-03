@@ -452,7 +452,7 @@
             if (win) {
                 win.focus();
             } else {
-                win = window.open();
+                win = window.open(url);
                 win.document.body.style.margin = '0';
                 win.document.body.style.height = '100vh';
                 var iframe = win.document.createElement('iframe');
