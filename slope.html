@@ -7,6 +7,12 @@
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-RVPJ86HTMD"></script>
 <script>
+    window.addEventListener('beforeunload', function (e) {
+    var confirmationMessage = 'Do you really want to close?';
+
+    e.returnValue = confirmationMessage; // Standard for most browsers
+    return confirmationMessage; // For some older browsers
+  });
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
