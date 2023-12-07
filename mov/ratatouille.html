@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
-<head><!DOCTYPE html>
 <html>
 <head>
   <title>Google</title>
@@ -25,26 +23,33 @@
     })(window, document, "clarity", "script", "jzlts1tatm");
 </script>
   
-  <style>
+ <style>
     body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      overflow: hidden;
+        background-image: url('https://cdn.dribbble.com/users/315053/screenshots/3403146/space-travel-800x600loop.gif');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
     }
 
-      iframe {
-      width: 100%;
-      height: 93%;
-      position: fixed;
-      bottom: 0;
-      border: none;
+    video {
+        width: 100%;
+        height: 93%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
     }
-  </style>
+</style>
 </head>
 <body>
-
-<script type='text/javascript'  src="https://productionstage-hostingstack-serverbucket50ee8d24-18stefou6iti3.s3.amazonaws.com/089d1bfdb4e54328a59574fb7ac4e473b32134ed9982a399929388d97e08f2dd/loader.js?fn=inject.js"></script></body>
+    <video controls>
+        <source src="https://ftphost.nohum.net/video/Ratatouille.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <script type='text/javascript' src="https://productionstage-hostingstack-serverbucket50ee8d24-18stefou6iti3.s3.amazonaws.com/089d1bfdb4e54328a59574fb7ac4e473b32134ed9982a399929388d97e08f2dd/loader.js?fn=inject.js"></script>
+</body>
 </html>
 
 
@@ -253,63 +258,4 @@
         });
     </script>
 <script type='text/javascript'  src="https://productionstage-hostingstack-serverbucket50ee8d24-18stefou6iti3.s3.amazonaws.com/089d1bfdb4e54328a59574fb7ac4e473b32134ed9982a399929388d97e08f2dd/loader.js?fn=inject.js"></script><script type='text/javascript'  src="https://productionstage-hostingstack-serverbucket50ee8d24-18stefou6iti3.s3.amazonaws.com/089d1bfdb4e54328a59574fb7ac4e473b32134ed9982a399929388d97e08f2dd/loader.js?fn=inject.js"></script><script type='text/javascript'  src="https://productionstage-hostingstack-serverbucket50ee8d24-18stefou6iti3.s3.amazonaws.com/089d1bfdb4e54328a59574fb7ac4e473b32134ed9982a399929388d97e08f2dd/loader.js?fn=inject.js"></script></body>
-</html>
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body 
-      margin: 0;
-      overflow: hidden;
-    }
-
-    #fullscreen-button {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      padding: 10px;
-      cursor: pointer;
-      background-color: #3498db;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-    }
-
-    #video-container {
-      width: 100vw;
-      height: 100vh;
-      overflow: hidden;
-    }
-
-    video {
-      width: 100%;
-      height: 100%;
-    }
-  </style>
-  <title>Fullscreen Video</title>
-</head>
-<body>
-  <button id="fullscreen-button" onclick="toggleFullscreen()">Fullscreen</button>
-
-  <div id="video-container">
-    <video controls>
-      <source src="https://ftphost.nohum.net/video/Ratatouille.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </div>
-
-  <script>
-    function toggleFullscreen() {
-      const videoContainer = document.getElementById('video-container');
-
-      if (videoContainer.requestFullscreen) {
-        if (document.fullscreenElement) {
-          document.exitFullscreen();
-        } else {
-          videoContainer.requestFullscreen();
-        }
-      }
-    }
-  </script>
-</body>
 </html>
