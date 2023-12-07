@@ -1,4 +1,52 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+
+    #fullscreen-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      padding: 10px;
+      cursor: pointer;
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+    }
+  </style>
+  <title>Fullscreen Button</title>
+</head>
+<body>
+  <button id="fullscreen-button" onclick="toggleFullscreen()">Fullscreen</button>
+
+  <!-- Your content goes here -->
+  <div style="width: 100vw; height: 100vh; background-color: #ecf0f1;">
+    <h1>Your Content Goes Here</h1>
+  </div>
+
+  <script>
+    function toggleFullscreen() {
+      if (document.fullscreenElement) {
+        // If fullscreen is active, exit fullscreen
+        document.exitFullscreen();
+      } else {
+        // If not in fullscreen, request fullscreen
+        document.documentElement.requestFullscreen();
+      }
+    }
+  </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
 <html>
 <head>
   <title>Google</title>
