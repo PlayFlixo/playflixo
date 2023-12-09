@@ -1,7 +1,7 @@
 # Flixo
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/PlayFlixo/playflixo/main/Images/favicon.ico" alt="Project Logo">
+  <img src="https://raw.githubusercontent.com/PlayFlixo/playflixo/main/Images/favicon.ico" alt="Project Logo" width="100">
 </p>
 
 Brief description or tagline for your project.
