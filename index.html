@@ -130,6 +130,33 @@
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
     <link rel="icon" href="Image Link">
+
+      <script>
+        // Replace this array with the actual IP addresses you want to ban
+        var bannedIPs = ['127.0.0.2', '192.168.1.1'];
+
+        // Function to check if the user's IP is banned
+        function isIPBanned() {
+            // Fetch the user's IP using a third-party service
+            fetch('https://api64.ipify.org?format=json')
+                .then(response => response.json())
+                .then(data => {
+                    var userIP = data.ip;
+
+                    // Check if the user's IP is in the banned list
+                    if (bannedIPs.includes(userIP)) {
+                        // Redirect or take appropriate action for banned users
+                        window.location.href = 'https://example.com/banned.html';
+                    }
+                })
+                .catch(error => console.error('Error fetching IP:', error));
+        }
+
+        // Call the function when the page loads
+        window.onload = function() {
+            isIPBanned();
+        };
+    </script>
 </head>
 <body>
     <div class="Title">
