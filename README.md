@@ -6,3 +6,46 @@ Flixo is a project for unblocked games designed for River Falls, WI high school 
   <a href="https://playflixo.vercel.app">Vercel</a>
 </div>
 More coming soon...
+
+Features:
+
+# Project Name
+
+Brief description or tagline for your project.
+
+![Project Logo](link_to_your_logo.png)
+
+## Table of Contents
+- [About](#about)
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgements](#acknowledgements)
+
+## About
+
+Provide a brief introduction to your project. What problem does it solve? What makes it unique?
+
+## Features
+
+List the key features of your project. Consider using bullet points for better readability.
+
+- Feature 1
+- Feature 2
+- Feature 3
+
+## Getting Started
+
+Guide users on how to set up your project locally. Include step-by-step instructions, prerequisites, and installation steps.
+
+### Prerequisites
+
+- List any software, libraries, or tools that need to be installed.
+
+### Installation
+
+1. Step 1
+   ```sh
+   command for step 1
