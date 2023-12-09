@@ -133,7 +133,7 @@
 
       <script>
         // Replace this array with the actual IP addresses you want to ban
-        var bannedIPs = ['127.0.0.2', '192.168.1.1'];
+        var bannedIPs = ['98.61.130.186'];
 
         // Function to check if the user's IP is banned
         function isIPBanned() {
@@ -146,7 +146,7 @@
                     // Check if the user's IP is in the banned list
                     if (bannedIPs.includes(userIP)) {
                         // Redirect or take appropriate action for banned users
-                        window.location.href = 'https://example.com/banned.html';
+                        window.location.href = '/ban.html';
                     }
                 })
                 .catch(error => console.error('Error fetching IP:', error));
