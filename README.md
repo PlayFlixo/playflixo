@@ -20,8 +20,13 @@ Flixo is a project for unblocked games designed for River Falls, WI high school 
 
 - Games
 - Movies
-- Tv
+- TV
 - Proxies
 - IP Banning
 
 ## URLs
+
+- [Google Sites](https://sites.google.com/view/playflixo)
+- [Vercel](https://playflixo.vercel.app)
+
+More coming soon
