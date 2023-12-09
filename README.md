@@ -13,7 +13,7 @@ Features:
 
 Brief description or tagline for your project.
 
-![Project Logo](link_to_your_logo.png)
+![Project Logo]([link_to_your_logo.png](https://raw.githubusercontent.com/PlayFlixo/playflixo/main/Images/favicon.ico))
 
 ## Table of Contents
 - [About](#about)
@@ -26,15 +26,15 @@ Brief description or tagline for your project.
 
 ## About
 
-Provide a brief introduction to your project. What problem does it solve? What makes it unique?
+Flixo is a project for unblocked games designed for River Falls, WI high school students, however it is still in active development.
 
 ## Features
 
-List the key features of your project. Consider using bullet points for better readability.
-
-- Feature 1
-- Feature 2
-- Feature 3
+- Games
+- Movies
+- Tv
+- Proxies
+- IP Banning
 
 ## Getting Started
 
