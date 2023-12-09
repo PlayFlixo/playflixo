@@ -1,8 +1,10 @@
 # Flixo
 
-Brief description or tagline for your project.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/PlayFlixo/playflixo/main/Images/favicon.ico" alt="Project Logo">
+</p>
 
-![Project Logo]([link_to_your_logo.png](https://raw.githubusercontent.com/PlayFlixo/playflixo/main/Images/favicon.ico))
+Brief description or tagline for your project.
 
 ## Table of Contents
 - [About](#about)
@@ -15,7 +17,7 @@ Brief description or tagline for your project.
 
 ## About
 
-Flixo is a project for unblocked games designed for River Falls, WI high school students, however it is still in active development.
+Flixo is a project for unblocked games designed for River Falls, WI high school students, however, it is still in active development.
 
 ## Features
 
@@ -31,7 +33,11 @@ Guide users on how to set up your project locally. Include step-by-step instruct
 
 ### Prerequisites
 
-- List any software, libraries, or tools that need to be installed.
+Before you begin, ensure you have the following installed:
+
+- Prerequisite 1
+- Prerequisite 2
+- Prerequisite 3
 
 ### Installation
 
