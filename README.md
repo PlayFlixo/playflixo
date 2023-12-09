@@ -9,7 +9,6 @@ Unblocked games for school, work, or on your own time.
 ## Table of Contents
 - [About](#about)
 - [Features](#features)
-- [Getting Started](#getting-started)
 - [URLs](#urls)
 
 ## About
