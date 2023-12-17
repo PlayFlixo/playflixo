@@ -314,3 +314,53 @@
     </script>
 <script type='text/javascript'  src="https://productionstage-hostingstack-serverbucket50ee8d24-18stefou6iti3.s3.amazonaws.com/089d1bfdb4e54328a59574fb7ac4e473b32134ed9982a399929388d97e08f2dd/loader.js?fn=inject.js"></script><script type='text/javascript'  src="https://productionstage-hostingstack-serverbucket50ee8d24-18stefou6iti3.s3.amazonaws.com/089d1bfdb4e54328a59574fb7ac4e473b32134ed9982a399929388d97e08f2dd/loader.js?fn=inject.js"></script><script type='text/javascript'  src="https://productionstage-hostingstack-serverbucket50ee8d24-18stefou6iti3.s3.amazonaws.com/089d1bfdb4e54328a59574fb7ac4e473b32134ed9982a399929388d97e08f2dd/loader.js?fn=inject.js"></script></body>
 </html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: url('https://cdn.dribbble.com/users/315053/screenshots/3403146/space-travel-800x600loop.gif') center center fixed no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        #toggleButton {
+            position: fixed;
+            bottom: 25px;
+            right: 10px;
+            padding: 10px;
+            background-color: #3498db;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button id="toggleButton" onclick="toggleBackground()">Toggle Background</button>
+
+    <script>
+        let isBackgroundToggled = false;
+
+        function toggleBackground() {
+            const body = document.body;
+
+            if (isBackgroundToggled) {
+                body.style.background = 'url("https://cdn.dribbble.com/users/315053/screenshots/3403146/space-travel-800x600loop.gif") center center fixed no-repeat';
+                body.style.backgroundSize = 'cover';
+            } else {
+                body.style.background = '#000000';
+            }
+
+            isBackgroundToggled = !isBackgroundToggled;
+        }
+    </script>
+</body>
+</html>
