@@ -33,10 +33,6 @@
      <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/PlayFlixo/playflixo/main/Images/favicon.ico">
     <style>
         body {
-            background-image: url('https://cdn.dribbble.com/users/315053/screenshots/3403146/space-travel-800x600loop.gif');
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
             margin-bottom: 0;
             margin-bottom: 0;
             scrollbar-width: thin;
@@ -429,7 +425,7 @@
     .about-link {
       position: fixed;
       bottom: 8px;
-      right: 3%;
+      left: 3%;
       text-decoration: none;
       color: #F5F5F5; /* Change the color as needed */
       font-size: 20px; /* Adjust the font size as needed */
@@ -438,7 +434,7 @@
     .admin-link {
       position: fixed;
       bottom: 8px;
-      right: 10%; /* 20px to the left of the about-link */
+      left: 10%; /* 20px to the left of the about-link */
       text-decoration: none;
       color: #F5F5F5; /* Change the color as needed */
       font-size: 20px; /* Adjust the font size as needed */
@@ -448,5 +444,57 @@
 <body>
   <a href="/about.html" class="about-link">About</a>
   <a href="/admin.html" class="admin-link">Admin</a>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden;
+            background: url('https://cdn.dribbble.com/users/315053/screenshots/3403146/space-travel-800x600loop.gif') center center fixed;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        #toggleButton {
+            position: fixed;
+            bottom: 3px;
+            right: 3px;
+            padding: 10px;
+            background-color: #F5F5F5;
+            color: #000000;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button id="toggleButton" onclick="toggleBackground()">Toggle Background</button>
+
+    <script>
+        let isBackgroundToggled = false;
+
+        function toggleBackground() {
+            const body = document.body;
+
+            if (isBackgroundToggled) {
+                body.style.background = 'url("https://cdn.dribbble.com/users/315053/screenshots/3403146/space-travel-800x600loop.gif") center center fixed no-repeat';
+                body.style.backgroundSize = 'cover';
+            } else {
+                body.style.background = '#000000';
+            }
+
+            isBackgroundToggled = !isBackgroundToggled;
+        }
+    </script>
 </body>
 </html>
