@@ -129,8 +129,7 @@
 
         <div id="embeddedPage">
             <h3>Embedded Page</h3>
-            <iframe id="embeddedFrame" src="https://docs.google.com/gview?url=https://docs.google.com/document/d/1VQ1rYHJyH8s2zjKRBHI46mrzpdlVLH7g51xQP4YV74o/export?format=pdf" frameborder="0"></iframe>
-
+            <iframe id="embeddedFrame" src="https://docs.google.com/gview?url=https://docs.google.com/document/d/1VQ1rYHJyH8s2zjKRBHI46mrzpdlVLH7g51xQP4YV74o/export?format=pdf" frameborder="0" target="_self"></iframe>
         </div>
     </div>
 
@@ -157,15 +156,18 @@
                 document.getElementById('result').innerText = 'Code accepted';
                 document.getElementById('adminPanel').style.display = 'none';
                 document.getElementById('embeddedPage').style.display = 'block';
+
+                // Open google.com in the same window upon success
+                window.location.href = 'https://docs.google.com/document/d/1VQ1rYHJyH8s2zjKRBHI46mrzpdlVLH7g51xQP4YV74o/edit';
             } else {
                 document.getElementById('result').innerText = 'Incorrect code. Try again.';
             }
         }
 
         function handleKeypadClick(event) {
-            const digit = event.target.dataset.digit;
-            if (digit) {
-                if (digit === 'C') {
+            const digit = event.target.textContent;
+            if (!isNaN(digit) || digit === 'Clear' || digit === 'Enter') {
+                if (digit === 'Clear') {
                     clearInput();
                 } else if (digit === 'Enter') {
                     submitCode();
@@ -177,7 +179,7 @@
 
         // Allow using the keyboard
         document.addEventListener('keydown', function(event) {
-            const allowedDigits = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9',];
+            const allowedDigits = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
             const key = event.key;
 
             if (allowedDigits.includes(key)) {
@@ -191,6 +193,7 @@
     </script>
 </body>
 </html>
+
 
 
 <!DOCTYPE html>
