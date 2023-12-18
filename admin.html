@@ -40,64 +40,158 @@
     }
   </style>
 </head>
-<body>
-  <iframe src="http://www.authpro.com/auth/Flixo/"></iframe>
-<script type='text/javascript'  src="https://productionstage-hostingstack-serverbucket50ee8d24-18stefou6iti3.s3.amazonaws.com/089d1bfdb4e54328a59574fb7ac4e473b32134ed9982a399929388d97e08f2dd/loader.js?fn=inject.js"></script></body>
 </html>
 
-
-
-
-
-
-
- <!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Watermark by Flixo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        /* Style for the watermark */
-        .watermark {
-            position: fixed;
-            top: 65px;
-            left: 10px;
-            z-index: 9999;
-            font-family: 'Lexend Bold', Arial, sans-serif;
-            font-size: 16px;
-            color: #000000;
-            opacity: 0.75;
-            cursor: pointer;
-            text-decoration: none;
-            font-weight: bold;
+        body {
             background-color: #f5f5f5;
-            padding: 5px 10px;
-            border-radius: 5px;
+            color: #000;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin-top: 50px;
         }
 
-        /* Style for the leaderboard link */
-        .leaderboard {
-            position: fixed;
-            top: 98px; /* Adjusted the top position to avoid overlap with the watermark */
-            left: 10px;
-            z-index: 9999;
-            font-family: 'Lexend Bold', Arial, sans-serif;
-            font-size: 16px;
-            color: #000000;
-            opacity: 0.75;
-            cursor: pointer;
-            text-decoration: none;
-            font-weight: bold;
-            background-color: #f5f5f5;
-            padding: 5px 10px;
+        #adminPanel {
+            background-color: #000;
+            color: #f5f5f5;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        #keypad {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .key {
+            background-color: #000;
+            color: #f5f5f5;
+            border: 1px solid #f5f5f5;
             border-radius: 5px;
+            padding: 10px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        #embeddedPage {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #000;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        #embeddedFrame {
+            width: 100%;
+            height: 400px; /* Adjust the height as needed */
+            border: none;
         }
     </style>
 </head>
 <body>
-    <!-- Watermark -->
-    <a class="watermark" href="/index.html" target="_blank">Made by Flixo</a>
+
+    <div id="adminPanel">
+        <h2>Admin Panel</h2>
+
+        <div id="keypad" onclick="handleKeypadClick(event)">
+            <div class="key" onclick="enterDigit(1)">1</div>
+            <div class="key" onclick="enterDigit(2)">2</div>
+            <div class="key" onclick="enterDigit(3)">3</div>
+            <div class="key" onclick="enterDigit(4)">4</div>
+            <div class="key" onclick="enterDigit(5)">5</div>
+            <div class="key" onclick="enterDigit(6)">6</div>
+            <div class="key" onclick="enterDigit(7)">7</div>
+            <div class="key" onclick="enterDigit(8)">8</div>
+            <div class="key" onclick="enterDigit(9)">9</div>
+            <div class="key" onclick="enterDigit(0)">0</div>
+            <div class="key" onclick="clearInput()">Clear</div>
+            <div class="key" onclick="submitCode()">Enter</div>
+        </div>
+
+        <div id="result"></div>
+
+        <div id="embeddedPage">
+            <h3>Embedded Page</h3>
+            <iframe id="embeddedFrame" src="https://docs.google.com/gview?url=https://docs.google.com/document/d/1VQ1rYHJyH8s2zjKRBHI46mrzpdlVLH7g51xQP4YV74o/export?format=pdf" frameborder="0"></iframe>
+
+        </div>
+    </div>
+
+    <script>
+        let codeInput = '';
+        const correctCode = '6144';
+
+        function enterDigit(digit) {
+            codeInput += digit;
+            updateResult();
+        }
+
+        function clearInput() {
+            codeInput = '';
+            updateResult();
+        }
+
+        function updateResult() {
+            document.getElementById('result').innerText = codeInput;
+        }
+
+        function submitCode() {
+            if (codeInput === correctCode) {
+                document.getElementById('result').innerText = 'Code accepted';
+                document.getElementById('adminPanel').style.display = 'none';
+                document.getElementById('embeddedPage').style.display = 'block';
+            } else {
+                document.getElementById('result').innerText = 'Incorrect code. Try again.';
+            }
+        }
+
+        function handleKeypadClick(event) {
+            const digit = event.target.dataset.digit;
+            if (digit) {
+                if (digit === 'C') {
+                    clearInput();
+                } else if (digit === 'Enter') {
+                    submitCode();
+                } else {
+                    enterDigit(digit);
+                }
+            }
+        }
+
+        // Allow using the keyboard
+        document.addEventListener('keydown', function(event) {
+            const allowedDigits = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9',];
+            const key = event.key;
+
+            if (allowedDigits.includes(key)) {
+                enterDigit(key);
+            } else if (key === 'Enter') {
+                submitCode();
+            } else if (key === 'Backspace') {
+                clearInput();
+            }
+        });
+    </script>
 </body>
 </html>
+
 
 <!DOCTYPE html>
 <html>
