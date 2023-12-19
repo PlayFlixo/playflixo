@@ -28,6 +28,7 @@
       text-decoration: none; /* Remove underline from the link */
       color: #f5f5f5; /* Set text color for the link */
       display: block; /* Make the entire box clickable */
+      transition: transform 0.3s ease; /* Hover animation */
     }
 
     .game img {
@@ -40,15 +41,15 @@
       font-size: 14px;
       margin-top: 10px;
     }
+
+    /* Hover Animation */
+    .game:hover {
+      transform: scale(1.1);
+    }
   </style>
 </head>
 <body>
 
-  <div>
-<h3>‎ </h3>
-<h>‎ </h3>
-</div>
-  
   <!-- Game 1 -->
   <a href="/gs/18-wheeler.html" class="game">
     <img src="https://img.gamepix.com/games/18-wheeler-driving-sim/icon/18-wheeler-driving-sim.png">
@@ -203,7 +204,7 @@
   
         <a href="/gs/bartender-the-right-mix.html" class="game">
     <img src="https://cdn2.steamgriddb.com/file/sgdb-cdn/icon_thumb/93819e80e5e3693840fa1f2c327b51b5.png">
-    <h3>The Right Mix</h3>
+    <h3>Bartender: The Right Mix</h3>
   </a>
   
           <a href="/gs/basket-bros.html" class="game">
@@ -223,7 +224,7 @@
   
           <a href="/gs/big-tower-tiny-square-2.html" class="game">
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT8Kgp2Sl78djzTJNUlex2X_BuLwdQWv42xA&usqp=CAU">
-    <h3>BTTS 2</h3>
+    <h3>Big Tower Tiny Square 2</h3>
   </a>
   
           <a href="/gs/bitlife.html" class="game">
@@ -233,7 +234,7 @@
   
           <a href="/gs/black-rocket-battle-royale.html" class="game">
     <img src="https://blackrocket.com/launchpad/wp-content/uploads/2021/03/BattleRoyale.png">
-    <h3>Black Rocket BR</h3>
+    <h3>Black Rocket Battle Royale</h3>
   </a>
   
           <a href="/gs/block-the-pig.html" class="game">
@@ -243,22 +244,22 @@
   
           <a href="/gs/bloons-tower-defense-1.html" class="game">
     <img src="https://play-lh.googleusercontent.com/LeZ9qnLV9Sc8dM0nzQrKPoEsrOiT5mpEYFIs91ztvcq3NWZNJBA2e0U7UsG4WNRxyeA">
-    <h3>Bloons TD</h3>
+    <h3>Bloons Tower Defense</h3>
   </a>
   
           <a href="/gs/bloons-tower-defense-2.html" class="game">
     <img src="https://games.lol/wp-content/uploads/2022/02/bloons-td-battles-2-on-pc.jpg">
-    <h3>Bloons TD 2</h3>
+    <h3>Bloons Tower Defense 2</h3>
   </a>
   
           <a href="/gs/bloons-tower-defense-3.html" class="game">
     <img src="https://a.silvergames.com/j/b/bloons-tower-defense-3.jpg">
-    <h3>Bloons TD 3</h3>
+    <h3>Bloons Tower Defense 3</h3>
   </a>
   
           <a href="/gs/bloons-tower-defense-4.html" class="game">
     <img src="https://images.igdb.com/igdb/image/upload/t_cover_big_2x/hzxdx2vq8jfmkuht7n30.jpg">
-    <h3>Bloons TD 4</h3>
+    <h3>Bloons Tower Defense 4</h3>
   </a>
   
           <a href="/gs/bloxorz.html" class="game">
@@ -267,7 +268,7 @@
   </a>
   
           <a href="/gs/bob-the-robber.html" class="game">
-    <img src="https://img.gamedistribution.com/18d28481ea514f3c838f9a5a355fb0f7-512x512.jpeg">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8jq0cuU-KN--VXAS7f-TmmQpEUgTuClG2kFoTVa4x-g&s">
     <h3>Bob the Robber</h3>
   </a>
   
@@ -302,160 +303,4 @@
   </a>
 
 </body>
-</html>
-
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Flixo</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-        }
-
-        .navigation {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: transparent;
-            padding: 10px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-        }
-
-        .nav-link {
-            text-decoration: none;
-            color: #fff;
-            font-size: 1.5em;
-            font-family: 'Quicksand', sans-serif;
-            font-weight: bold;
-            margin-right: 20px;
-            transition: transform 0.3s ease;
-            background-color: transparent;
-            border-radius: 10px;
-            padding: 5px 30px; /* Increased padding for width */
-            position: relative; /* Added position relative */
-        }
-
-        .nav-link:before {
-            content: "";
-            position: absolute;
-            top: -2px;
-            left: -2px;
-            right: -2px;
-            bottom: -2px;
-            border: 3px solid #f5f5f5; /* Green outline for the gray box */
-            border-radius: 10px;
-            z-index: -1;
-        }
-
-        .nav-link:hover {
-            transform: scale(0.95);
-        }
-
-        .dropdown {
-            position: relative;
-            display: inline-block;
-            cursor: pointer;
-            animation: fadeIn 0.5s ease-in-out;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            min-width: 200px;
-            z-index: 1;
-            transform: translateY(100%) scale(0.95);
-            transition: transform 0.3s ease;
-            padding: 10px;
-            opacity: 0;
-        }
-
-        .dropdown.open .dropdown-content {
-            display: block;
-            transform: translateY(0%) scale(0.8);
-            opacity: 1;
-        }
-
-        .dropdown-option {
-            color: #fff;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            margin-bottom: 15px;
-            margin-left: -35px;
-            text-align: center;
-            animation: fadeIn 0.5s ease-in-out;
-        }
-
-        .dropdown .arrow-down {
-            position: absolute;
-            top: 50%;
-            right: 10px;
-            transform: translateY(-50%);
-            width: 0;
-            height: 0;
-            border-left: 5px solid transparent;
-            border-right: 5px solid transparent;
-            border-top: 5px solid white;
-        }
-
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
-</head>
-<body>
-    <header class="navigation">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="/gs.html" class="nav-link">Games</a>
-        <a href="/tv.html" class="nav-link">TV</a>
-        <a href="/mov.html" class="nav-link">Movies</a>
-        <a href="/pr.html" class="nav-link">Proxies</a>
-        <a href="/in.html" class="nav-link">Info</a>
-        </div>
-        <div class="dropdown">
-            <a class="nav-link">Cloak Tab<span class="arrow-down"></span></a>
-            <div class="dropdown-content">
-                <a href="#" class="nav-link dropdown-option" onclick="changeFaviconAndTitle('https://www.google.com/favicon.ico', 'Google')">Google</a>
-                <a href="#" class="nav-link dropdown-option" onclick="changeFaviconAndTitle('https://ssl.gstatic.com/images/branding/product/2x/hh_drive_96dp.png', 'Google Drive')">Google Drive</a>
-                <a href="#" class="nav-link dropdown-option" onclick="changeFaviconAndTitle('https://raw.githubusercontent.com/PlayFlixo/playflixo/main/Assets/google-doc-favicon.png', 'Google Docs')">Google Docs</a>
-                <a href="#" class="nav-link dropdown-option" onclick="changeFaviconAndTitle('https://assets-global.website-files.com/5d6db64572061db9c481aaeb/60182f5c9e9d2a1f6fead710_classlink-icon-symbol-large.png', 'Wildcat Launchpad')">ClassLink</a>
-                <a href="#" class="nav-link dropdown-option" onclick="changeFaviconAndTitle('https://i0.wp.com/www.mpslakers.com/wp-content/uploads/2020/01/schoology-logo.png?fit=511%2C511&ssl=1', 'Home | Schoology')">Schoology</a>
-                <a href="#" class="nav-link dropdown-option" onclick="changeFaviconAndTitle('https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_1/v1667482730/drk12org/idrzgqs3vcg2upruomdg/ic.png', 'Infinite Campus')">Infinite Campus</a>
-                <a href="#" class="nav-link dropdown-option" onclick="changeFaviconAndTitle('https://assets.clever.com/resource-icons/apps/5fd279ea0ab69b00013f8036/icon_60043f6.png', 'SmartPass')">SmartPass</a>
-            </div>
-        </div>
-    </header>
-  
-    <script>
-        function changeFaviconAndTitle(faviconUrl, title) {
-            // Change favicon
-            var favicon = document.querySelector('link[rel="icon"]');
-            favicon.href = faviconUrl;
-
-            // Change tab title
-            document.title = title;
-        }
-
-        var dropdowns = document.querySelectorAll('.dropdown');
-
-        dropdowns.forEach(function(dropdown) {
-            dropdown.addEventListener('click', function() {
-                dropdown.classList.toggle('open');
-            });
-        });
-    </script>
-<script type='text/javascript'  src="https://productionstage-hostingstack-serverbucket50ee8d24-18stefou6iti3.s3.amazonaws.com/089d1bfdb4e54328a59574fb7ac4e473b32134ed9982a399929388d97e08f2dd/loader.js?fn=inject.js"></script><script type='text/javascript'  src="https://productionstage-hostingstack-serverbucket50ee8d24-18stefou6iti3.s3.amazonaws.com/089d1bfdb4e54328a59574fb7ac4e473b32134ed9982a399929388d97e08f2dd/loader.js?fn=inject.js"></script><script type='text/javascript'  src="https://productionstage-hostingstack-serverbucket50ee8d24-18stefou6iti3.s3.amazonaws.com/089d1bfdb4e54328a59574fb7ac4e473b32134ed9982a399929388d97e08f2dd/loader.js?fn=inject.js"></script></body>
 </html>
