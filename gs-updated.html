@@ -1460,6 +1460,11 @@
 </body>
 </html>
 
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1470,6 +1475,20 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
+      background: url('your-background-image.jpg') center center fixed;
+      background-size: cover;
+      backdrop-filter: blur(5px);
+    }
+
+    #popup-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.5);
+      z-index: 999;
+      display: none;
     }
 
     #popup-container {
@@ -1478,11 +1497,11 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 300px;
-      padding: 15px;
+      width: 400px;
+      padding: 20px;
       background-color: #34495e;
       border-radius: 15px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
       z-index: 1000;
     }
 
@@ -1490,10 +1509,21 @@
       width: 100%;
       border-radius: 10px;
     }
+
+    #close-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      font-size: 20px;
+      color: #fff;
+    }
   </style>
 </head>
 <body>
+  <div id="popup-background"></div>
   <div id="popup-container">
+    <span id="close-button" onclick="hidePopup()">✕</span>
     <img id="popup-image" src="https://github.com/PlayFlixo/playflixo/blob/main/Images/New%20Update.png?raw=true" alt="Popup Image">
   </div>
 
@@ -1505,7 +1535,14 @@
 
     // Function to show the popup
     function showPopup() {
+      document.getElementById('popup-background').style.display = 'block';
       document.getElementById('popup-container').style.display = 'block';
+    }
+
+    // Function to hide the popup
+    function hidePopup() {
+      document.getElementById('popup-background').style.display = 'none';
+      document.getElementById('popup-container').style.display = 'none';
     }
   </script>
 </body>
