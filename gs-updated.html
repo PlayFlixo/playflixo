@@ -1477,7 +1477,6 @@
       font-family: Arial, sans-serif;
       background: url('your-background-image.jpg') center center fixed;
       background-size: cover;
-      backdrop-filter: blur(5px);
     }
 
     #popup-background {
@@ -1537,12 +1536,14 @@
     function showPopup() {
       document.getElementById('popup-background').style.display = 'block';
       document.getElementById('popup-container').style.display = 'block';
+      document.body.style.overflow = 'hidden'; // Prevent page scrolling
     }
 
     // Function to hide the popup
     function hidePopup() {
       document.getElementById('popup-background').style.display = 'none';
       document.getElementById('popup-container').style.display = 'none';
+      document.body.style.overflow = ''; // Enable page scrolling
     }
   </script>
 </body>
