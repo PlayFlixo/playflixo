@@ -1459,3 +1459,54 @@
 
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Popup Example</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    #popup-container {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 300px;
+      padding: 15px;
+      background-color: #34495e;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+    }
+
+    #popup-image {
+      width: 100%;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="popup-container">
+    <img id="popup-image" src="https://github.com/PlayFlixo/playflixo/blob/main/Images/New%20Update.png?raw=true" alt="Popup Image">
+  </div>
+
+  <script>
+    // Function to show the popup on page load
+    window.onload = function() {
+      showPopup();
+    };
+
+    // Function to show the popup
+    function showPopup() {
+      document.getElementById('popup-container').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
