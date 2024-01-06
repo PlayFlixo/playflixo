@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV Episode Library</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #d3d3d3;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .library {
+            max-width: 800px;
+            width: 100%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .header {
+            background-color: #34495e;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .episode {
+            display: flex;
+            border-bottom: 1px solid #ddd;
+            padding: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .episode:hover {
+            background-color: #f9f9f9;
+        }
+
+        .episode img {
+            max-width: 100px;
+            height: auto;
+            margin-right: 15px;
+        }
+
+        .episode-details {
+            flex-grow: 1;
+        }
+
+        .episode-title {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .episode-description {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="library">
+        <div class="header">
+            <h1>TV Episode Library</h1>
+        </div>
+        <div class="episode" onclick="showEpisodeDetails(1)">
+            <img src="episode1.jpg" alt="Episode 1">
+            <div class="episode-details">
+                <div class="episode-title">Episode 1: The Beginning</div>
+                <div class="episode-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+            </div>
+        </div>
+        <div class="episode" onclick="showEpisodeDetails(2)">
+            <img src="episode2.jpg" alt="Episode 2">
+            <div class="episode-details">
+                <div class="episode-title">Episode 2: The Adventure Continues</div>
+                <div class="episode-description">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+            </div>
+        </div>
+        <!-- Add more episodes as needed -->
+
+        <!-- Episode Details Modal -->
+        <div id="episodeModal" style="display: none;">
+            <div onclick="closeEpisodeDetails()" style="cursor: pointer; position: fixed; top: 0; right: 0; bottom: 0; left: 0; background: rgba(0, 0, 0, 0.5);"></div>
+            <div style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+                <h2>Episode Details</h2>
+                <p id="episodeDetailsContent"></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showEpisodeDetails(episodeNumber) {
+            const episodeDetails = document.getElementById("episodeDetailsContent");
+            // Fetch episode details from the backend (you need to implement this part)
+            // For now, let's use static content
+            const episodeContent = (episodeNumber === 1) ? "Details for Episode 1." : "Details for Episode 2.";
+            episodeDetails.innerText = episodeContent;
+            document.getElementById("episodeModal").style.display = "block";
+        }
+
+        function closeEpisodeDetails() {
+            document.getElementById("episodeModal").style.display = "none";
+        }
+    </script>
+</body>
+</html>
