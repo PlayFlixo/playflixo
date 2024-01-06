@@ -7,13 +7,20 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #d3d3d3;
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            background: url('https://cdn.dribbble.com/users/315053/screenshots/3403146/space-travel-800x600loop.gif') no-repeat center center fixed; 
+            background-size: cover;
+            animation: backgroundAnimation 10s infinite linear;
+        }
+
+        @keyframes backgroundAnimation {
+            from { background-position: 0 0; }
+            to { background-position: 100% 100%; }
         }
 
         .library {
@@ -37,6 +44,9 @@
             padding: 15px;
             cursor: pointer;
             transition: background-color 0.3s;
+            background: rgba(255, 255, 255, 1); /* Background color with transparency */
+            text-decoration: none; /* Remove default anchor underline */
+            color: #000; /* Set the text color */
         }
 
         .episode:hover {
@@ -66,22 +76,20 @@
 <body>
     <div class="library">
         <div class="header">
-            <h1>TV Episode Library</h1>
+            <h1>The Office</h1>
         </div>
-        <div class="episode" onclick="showEpisodeDetails(1)">
-            <img src="episode1.jpg" alt="Episode 1">
+        <a href="/tv/the-office/ep-1.html" class="episode">
             <div class="episode-details">
-                <div class="episode-title">Episode 1: The Beginning</div>
-                <div class="episode-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                <div class="episode-title">Episode 1: Pilot</div>
+                <div class="episode-description">When a documentary crew arrives at the office, manager Michael Scott attempts to paint a rosy picture but fails after learning the company will be downsizing.</div>
             </div>
-        </div>
-        <div class="episode" onclick="showEpisodeDetails(2)">
-            <img src="episode2.jpg" alt="Episode 2">
+        </a>
+        <a href="" class="episode">
             <div class="episode-details">
-                <div class="episode-title">Episode 2: The Adventure Continues</div>
-                <div class="episode-description">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                <div class="episode-title">Episode 2: Diversity Day</div>
+                <div class="episode-description">Coming 01/10/2023</div>
             </div>
-        </div>
+        </a>
         <!-- Add more episodes as needed -->
 
         <!-- Episode Details Modal -->
