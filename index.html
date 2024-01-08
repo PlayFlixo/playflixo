@@ -41,6 +41,20 @@
             border: 0px solid #F5F5F5;
         }
 
+          #splash-text {
+            font-size: 24px;
+            text-align: center;
+            margin: 0; /* Adjusted margin to 0 */
+            padding: 0;
+            font-family: 'Lexend', sans-serif;
+            background: transparent;
+            color: #f5f5f5;
+            position: absolute; /* Changed position to absolute */
+            top: 33%;
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%); /* Center horizontally */
+        }
+
         ::-webkit-scrollbar {
             width: 8px;
             background-color: black;
@@ -200,6 +214,9 @@
     <div class="Title">
         <h1 class="title">Flixo</h1>
     </div>
+
+     <div id="splash-text"></div>
+     
     <div class="Announcements-Title">
         <h2 class="header">Announcements</h2>
     </div>
@@ -476,7 +493,7 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 400px;
+      width: 450px;
       padding: 20px;
       background-color: #34495e;
       border-radius: 15px;
@@ -525,6 +542,34 @@
       document.getElementById('popup-container').style.display = 'none';
       document.body.style.overflow = ''; // Enable page scrolling
     }
+
+               document.addEventListener("DOMContentLoaded", function() {
+        // List of splash texts
+        var splashTexts = [
+            "Choose from a selection of 201 games",
+            "40 Movies?",
+            "May want to check out The Office?",
+            "just a bit of coding later...",
+             "anyone up for papa murphy's?",
+             "umm, no.",
+             "fun factL we have users from other countries",
+             "chances are your from rf",
+             "Hey Madison, thanks for using the site!!!",
+             "58k visits is crazy",
+             "unblocked for rfsd students for 94 days",
+             "just order some damn pizza already",
+             "add me on snap @logachristian",
+             "stay updated on instagram @playflixo",
+            // Add more splash texts as needed
+        ];
+
+        // Get a random index from the array
+        var randomIndex = Math.floor(Math.random() * splashTexts.length);
+
+        // Display the chosen splash text
+        var splashTextElement = document.getElementById("splash-text");
+        splashTextElement.innerHTML = splashTexts[randomIndex];
+    });
   </script>
 </body>
 </html>
